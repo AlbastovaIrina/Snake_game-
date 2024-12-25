@@ -45,6 +45,10 @@ class GameObject:
         """Отрисовывает ячейку на экране."""
         pygame.draw.rect(screen, color, (position[0], position[1],
                                         CELL_SIZE, CELL_SIZE))
+        pygame.draw.rect(
+            screen, color, (position[0], position[1],
+                            CELL_SIZE, CELL_SIZE)
+        )
 
 
 class Apple(GameObject):
