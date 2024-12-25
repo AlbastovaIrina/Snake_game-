@@ -43,8 +43,10 @@ class GameObject:
 
     def draw_cell(self, screen, position, color):
         """Отрисовывает ячейку на экране."""
-        pygame.draw.rect(screen, color, (position[0], position[1],
-                                        CELL_SIZE, CELL_SIZE))
+        pygame.draw.rect(
+            screen, color, (position[0], position[1],
+                            CELL_SIZE, CELL_SIZE)
+        )
 
 
 class Apple(GameObject):
