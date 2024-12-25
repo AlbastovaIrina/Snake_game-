@@ -1,5 +1,5 @@
-import pygame
 import random
+import pygame
 
 # Инициализация Pygame
 pygame.init()
@@ -180,8 +180,10 @@ def draw_game(snake, apple):
     SCREEN.fill(BACKGROUND_COLOR)
     snake.draw(SCREEN)
     apple.draw(SCREEN)
-    draw_text(f"Length: {snake.length}", TEXT_SIZE, (255, 255, 255), 10, 10)
-    draw_text(f"Speed: {current_speed}", TEXT_SIZE, (255, 255, 255), 10, 30)
+    draw_text(f"Length: {snake.length}", TEXT_SIZE, (255, 255, 255),
+        10, 10)
+    draw_text(f"Speed: {current_speed}", TEXT_SIZE, (255, 255, 255),
+        10, 30)
     pygame.display.flip()
 
 
