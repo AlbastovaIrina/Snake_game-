@@ -1,5 +1,5 @@
-import random
 import pygame
+from random import randrange
 
 # Инициализация Pygame
 pygame.init()
@@ -61,8 +61,8 @@ class Apple(GameObject):
     def randomize_position(self):
         """Устанавливает случайное положение яблока."""
         self.position = (
-            random.randrange(0, FIELD_WIDTH) * CELL_SIZE,
-            random.randrange(0, FIELD_HEIGHT) * CELL_SIZE,
+            randrange(0, FIELD_WIDTH) * CELL_SIZE,
+            randrange(0, FIELD_HEIGHT) * CELL_SIZE,
         )
 
     def draw(self, screen):
