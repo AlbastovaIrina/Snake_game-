@@ -1,5 +1,6 @@
 """The snake game is implemented in this file."""
 import pygame
+
 from random import randrange
 
 # Инициализация Pygame
