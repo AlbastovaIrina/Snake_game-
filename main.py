@@ -1,3 +1,4 @@
+"""The snake game is implemented in this file."""
 import pygame
 from random import randrange
 
@@ -179,9 +180,9 @@ def draw_game(snake, apple):
     snake.draw(SCREEN)
     apple.draw(SCREEN)
     draw_text(f"Length: {snake.length}", TEXT_SIZE, (255, 255, 255),
-        10, 10)
+              10, 10)
     draw_text(f"Speed: {current_speed}", TEXT_SIZE, (255, 255, 255),
-        10, 30)
+              10, 30)
     pygame.display.flip()
 
 
