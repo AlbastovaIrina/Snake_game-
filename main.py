@@ -84,10 +84,10 @@ class Snake(GameObject):
 
     def update_direction(self, new_direction):
         """Обновляет направление движения змейки."""
-        if new_direction[0] != -self.direction[0] or \
-           new_direction[1] != -self.direction[1]:
+        opp_dir = (-self.direction[0], -self.direction[1])
+        if tuple(new_direction) not in (opp_dir,):
             self.next_direction = new_direction
-
+            
     def move(self):
         """Перемещает змейку на одну клетку в текущем направлении."""
         if self.next_direction:
@@ -95,10 +95,8 @@ class Snake(GameObject):
             self.next_direction = None
 
         head_position = self.positions[0]
-        new_head_position = (
-            head_position[0] + self.direction[0],
-            head_position[1] + self.direction[1]
-        )
+        new_head_position = tuple(map(sum, zip(head_position, self.direction)))
+
         self.positions.insert(0, new_head_position)
         if len(self.positions) > self.length:
             self.positions.pop()
